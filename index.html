@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#050510">
+  <meta name="description" content="Wisp Run — a neon arcade. Gather motes of light and outrun the dark.">
+  <title>Wisp Run</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="game" aria-label="Wisp Run game"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <div id="hud" class="hud hidden">
+    <div class="stat">
+      <span class="label">Score</span>
+      <span id="score">0</span>
+    </div>
+    <div class="stat">
+      <span class="label">Combo</span>
+      <span id="combo">x1</span>
+    </div>
+    <div class="stat">
+      <span class="label">Time</span>
+      <span id="time">0.0</span>
+    </div>
+  </div>
+
+  <button id="mute" type="button" class="mute" aria-pressed="false" aria-label="Mute sound">
+    <span class="mute-on">♪</span>
+    <span class="mute-off">♪̸</span>
+  </button>
+
+  <div id="title" class="overlay">
+    <div class="panel">
+      <p class="eyebrow">Neon arcade</p>
+      <h1>Wisp Run</h1>
+      <p class="tagline">Gather the motes. Outrun the dark.</p>
+      <button id="play" type="button" class="btn">Play</button>
+      <p class="help">WASD or arrows to move · hold &amp; drag to steer</p>
+    </div>
+  </div>
+
+  <div id="gameover" class="overlay hidden">
+    <div class="panel">
+      <p class="eyebrow">Run over</p>
+      <h1>Extinguished</h1>
+      <div class="results">
+        <div>
+          <span class="label">Score</span>
+          <span id="final-score">0</span>
+        </div>
+        <div>
+          <span class="label">Best</span>
+          <span id="best-score">0</span>
+        </div>
+      </div>
+      <button id="restart" type="button" class="btn">Restart</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
